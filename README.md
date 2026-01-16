@@ -7,10 +7,14 @@
 - 常见工作流：生成训练/测试 pickles → 生成 eval pickles → 训练。
 
 分支策略（本次已创建本地分支）：
-- `pc`：只包含点云/单模态训练配置与代码。
+- `pc`：聚焦“PC 单模态运行”。当前修改点：
+   - `config/config_baseline.txt`：数据根指向 `/root/autodl-tmp/benchmark_datasets`，批大小/epoch 适配单模态训练。
+   - `misc/utils.py`：在未使用 RGB 时确保 `lidar2image_ndx` 属性为空且不会报错。
+   - `datasets/oxford.py`：仅在提供 `lidar2image_ndx_path` 时加载图像索引，纯点云模式不再抛错。
+   - `scripts/show_progress.py`、`scripts/parse_log_epochs.py`、`scripts/plot_training_progress.py`：用于日志监控与指标可视化的辅助脚本。
 - `rgb`：包含 RGB（或多模态）相关代码、`image_path` 与 `lidar2image_ndx.pickle` 的处理脚本。
 
-本地 git 操作由自动化脚本完成；如需我将分支推送到远程，请提供推送授权或在该机器上配置 Git 凭据/SSH key。
+推送说明：当前环境尚未配置 GitHub 凭据/SSH key，尚未将 `pc`/`rgb` 分支推送到远程。如需推送，请在本机配置凭据或提供可用的 SSH key。
 # MinkLoc++: Lidar and Monocular Image Fusion for Place Recognition
 
 Paper: [MinkLoc++: Lidar and Monocular Image Fusion for Place Recognition](https://ieeexplore.ieee.org/document/9533373) 
