@@ -1,0 +1,6 @@
+# MinkLoc3D model
+[MODEL]
+#model = WaveMultimodalInfer
+model = WaveMultimodalInferAll256
+mink_quantization_size = 0.01
+block=ECABasicBlock

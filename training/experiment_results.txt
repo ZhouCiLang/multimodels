@@ -1,0 +1,3 @@
+minkloc3d.txt, config_baseline.txt, model_MinkLoc3D_20260115_2010, 67.96, 47.00, 80.42, 58.64, 63.11, 46.18, 56.17, 44.19, 66.91, 49.00
+minkloc3d.txt, config_baseline.txt, model_MinkLoc3D_20260115_2049, 89.03, 76.04, 89.30, 75.70, 81.38, 66.25, 78.17, 68.91, 84.47, 71.73
+minkloc3d.txt, config_baseline.txt, model_MinkLoc3D_20260115_2123, 97.16, 91.58, 94.52, 84.60, 89.45, 78.76, 86.69, 79.81, 91.95, 83.68

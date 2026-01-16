@@ -1,0 +1,1 @@
+{"train": {"loss1": 0.1918576063795222, "active_triplets1": 72.64583333333333, "num_non_zero_triplets": 72.64583333333333}, "val": {}, "_timestamp": 1702095225.9669645, "_runtime": 1407.822559595108, "_step": 9}

@@ -1,0 +1,247 @@
+{
+    "os": "Linux-4.15.0-45-generic-x86_64-with-glibc2.17",
+    "python": "3.8.12",
+    "heartbeatAt": "2023-12-12T07:32:35.524688",
+    "startedAt": "2023-12-12T07:32:29.990738",
+    "docker": null,
+    "cuda": "10.1.243",
+    "args": [
+        "--config",
+        "./config/config_baseline_multimodal_sketchRGB.txt",
+        "--model_config",
+        "./models/minklocmultimodal.txt"
+    ],
+    "state": "running",
+    "program": "./training/train.py",
+    "codePathLocal": "training/train.py",
+    "codePath": "training/train.py",
+    "host": "l99573d439aa4531bec99a1593862e60-task0-0",
+    "username": "root",
+    "executable": "/opt/conda/envs/name/bin/python",
+    "cpu_count": 40,
+    "cpu_count_logical": 40,
+    "cpu_freq": {
+        "current": 2500.419000000001,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2500.064,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.147,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.653,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.782,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.59,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.379,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.382,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2509.256,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.982,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.372,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.386,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.031,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.634,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.588,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2497.976,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.007,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2502.488,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.761,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.95,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.934,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.664,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2501.335,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.545,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.119,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.997,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.032,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.569,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.97,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.27,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.115,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.129,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2504.269,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 878.6640281677246,
+            "used": 600.1203269958496
+        }
+    },
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla T4",
+            "memory_total": 15843721216
+        }
+    ],
+    "memory": {
+        "total": 376.5872497558594
+    }
+}

@@ -1,0 +1,7 @@
+# MinkLoc3D model
+[MODEL]
+model = WaveMultimodal
+mink_quantization_size = 0.01
+
+coordinates=cartesian
+quantization_step=0.01

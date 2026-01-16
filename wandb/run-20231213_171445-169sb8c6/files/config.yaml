@@ -1,0 +1,145 @@
+wandb_version: 1
+
+params_path:
+  desc: null
+  value: ./config/config_baseline_random.txt
+model_params_path:
+  desc: null
+  value: ./models/wavemultimodal256infer.txt
+num_points:
+  desc: null
+  value: 1024
+dataset_folder:
+  desc: null
+  value: /userhome/datasets/benchmark_datasets_random/
+use_cloud:
+  desc: null
+  value: true
+use_rgb:
+  desc: null
+  value: true
+image_path:
+  desc: null
+  value: /dataset/images4lidar_small20/
+lidar2image_ndx_path:
+  desc: null
+  value: /dataset/images4lidar_small20/lidar2image_ndx.pickle
+eval_database_files:
+  desc: null
+  value:
+  - oxford_evaluation_database.pickle
+eval_query_files:
+  desc: null
+  value:
+  - oxford_evaluation_query.pickle
+num_workers:
+  desc: null
+  value: 8
+batch_size:
+  desc: null
+  value: 8
+val_batch_size:
+  desc: null
+  value: 160
+batch_split_size:
+  desc: null
+  value: null
+batch_expansion_th:
+  desc: null
+  value: 0.7
+batch_size_limit:
+  desc: null
+  value: 160
+batch_expansion_rate:
+  desc: null
+  value: 1.4
+lr:
+  desc: null
+  value: 0.001
+image_lr:
+  desc: null
+  value: 0.0001
+optimizer:
+  desc: null
+  value: Adam
+scheduler:
+  desc: null
+  value: MultiStepLR
+scheduler_milestones:
+  desc: null
+  value:
+  - 40
+epochs:
+  desc: null
+  value: 60
+weight_decay:
+  desc: null
+  value: 0.0001
+normalize_embeddings:
+  desc: null
+  value: false
+loss:
+  desc: null
+  value: MultiBatchHardTripletMarginLoss
+weights:
+  desc: null
+  value:
+  - 0.5
+  - 0.5
+  - 0.0
+margin:
+  desc: null
+  value: 0.2
+similarity:
+  desc: null
+  value: euclidean
+aug_mode:
+  desc: null
+  value: 1
+train_file:
+  desc: null
+  value: /userhome/code/MinkLoc3D/generating_queries/training_queries_baseline.pickle
+val_file:
+  desc: null
+  value: null
+model_params.model_params_path:
+  desc: null
+  value: ./models/wavemultimodal256infer.txt
+model_params.model:
+  desc: null
+  value: WaveMultimodalInfer256
+model_params.mink_quantization_size:
+  desc: null
+  value: 0.01
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.12
+    cli_version: 0.15.12
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1702458885.215039
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 51
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 41
+      - 51
+      - 53
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.8.12
+      5: 0.15.12
+      8:
+      - 5
+      13: linux-x86_64

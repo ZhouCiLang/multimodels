@@ -1,0 +1,215 @@
+Multi-modal 原始自带模型 RGB+3D效果：10m
+Traversal: dawn
+Percentage of queries correctly localized (10m threshold): 0.887
+Traversal: dusk
+Percentage of queries correctly localized (10m threshold): 0.898
+Traversal: overcast-summer
+Percentage of queries correctly localized (10m threshold): 0.964
+Traversal: overcast-winter
+Percentage of queries correctly localized (10m threshold): 0.901
+Traversal: sun
+Percentage of queries correctly localized (10m threshold): 0.885
+Traversal: rain
+Percentage of queries correctly localized (10m threshold): 0.823
+Traversal: snow
+Percentage of queries correctly localized (10m threshold): 0.891
+Traversal: night
+Percentage of queries correctly localized (10m threshold): 0.898
+Traversal: night-rain
+Percentage of queries correctly localized (10m threshold): 0.665
+
+Multi-modal: 我们跑出来的RGB+3D模型：10m
+Traversal: dawn
+Percentage of queries correctly localized (10m threshold): 0.878
+Traversal: dusk
+Percentage of queries correctly localized (10m threshold): 0.904
+Traversal: overcast-summer
+Percentage of queries correctly localized (10m threshold): 0.936
+Traversal: overcast-winter
+Percentage of queries correctly localized (10m threshold): 0.866
+Traversal: sun
+Percentage of queries correctly localized (10m threshold): 0.876
+Traversal: rain
+Percentage of queries correctly localized (10m threshold): 0.798
+Traversal: snow
+Percentage of queries correctly localized (10m threshold): 0.845
+Traversal: night
+Percentage of queries correctly localized (10m threshold): 0.904
+Traversal: night-rain
+Percentage of queries correctly localized (10m threshold): 0.567
+
+##Wave-point 10mi
+Traversal: dawn
+Percentage of queries correctly localized (10m threshold): 0.891
+Traversal: dusk
+Percentage of queries correctly localized (10m threshold): 0.909
+Traversal: overcast-summer
+Percentage of queries correctly localized (10m threshold): 0.968
+Traversal: overcast-winter
+Percentage of queries correctly localized (10m threshold): 0.896
+Traversal: sun
+Percentage of queries correctly localized (10m threshold): 0.885
+Traversal: rain
+Percentage of queries correctly localized (10m threshold): 0.778
+Traversal: snow
+Percentage of queries correctly localized (10m threshold): 0.870
+Traversal: night
+Percentage of queries correctly localized (10m threshold): 0.914
+Traversal: night-rain
+Percentage of queries correctly localized (10m threshold): 0.607
+
+
+Multi-modal: 3D模型 original
+Traversal: dawn
+Percentage of queries correctly localized (10m threshold): 0.861
+Traversal: dusk
+Percentage of queries correctly localized (10m threshold): 0.893
+Traversal: overcast-summer
+Percentage of queries correctly localized (10m threshold): 0.950
+Traversal: overcast-winter
+Percentage of queries correctly localized (10m threshold): 0.896
+Traversal: sun
+Percentage of queries correctly localized (10m threshold): 0.885
+Traversal: rain
+Percentage of queries correctly localized (10m threshold): 0.793
+Traversal: snow
+Percentage of queries correctly localized (10m threshold): 0.837
+Traversal: night
+Percentage of queries correctly localized (10m threshold): 0.904
+Traversal: night-rain
+Percentage of queries correctly localized (10m threshold): 0.545
+
+multi-modal:3D their
+Traversal: dawn
+Percentage of queries correctly localized (5m threshold): 0.817
+Traversal: dusk
+Percentage of queries correctly localized (5m threshold): 0.872
+Traversal: overcast-summer
+Percentage of queries correctly localized (5m threshold): 0.877
+Traversal: overcast-winter
+Percentage of queries correctly localized (5m threshold): 0.782
+Traversal: sun
+Percentage of queries correctly localized (5m threshold): 0.809
+Traversal: rain
+Percentage of queries correctly localized (5m threshold): 0.773
+Traversal: snow
+Percentage of queries correctly localized (5m threshold): 0.753
+Traversal: night
+Percentage of queries correctly localized (5m threshold): 0.863
+Traversal: night-rain
+Percentage of queries correctly localized (5m threshold): 0.473
+
+multi-modal:3D their
+Traversal: dawn
+Percentage of queries correctly localized (10m threshold): 0.839
+Traversal: dusk
+Percentage of queries correctly localized (10m threshold): 0.893
+Traversal: overcast-summer
+Percentage of queries correctly localized (10m threshold): 0.945
+Traversal: overcast-winter
+Percentage of queries correctly localized (10m threshold): 0.847
+Traversal: sun
+Percentage of queries correctly localized (10m threshold): 0.871
+Traversal: rain
+Percentage of queries correctly localized (10m threshold): 0.798
+Traversal: snow
+Percentage of queries correctly localized (10m threshold): 0.824
+Traversal: night
+Percentage of queries correctly localized (10m threshold): 0.883
+Traversal: night-rain
+Percentage of queries correctly localized (10m threshold): 0.616
+
+
+Wave-multi-modal RGB+3D 128维度效果：10m
+Traversal: dawn
+0 missing scans
+Percentage of queries correctly localized (10m threshold): 0.870
+Traversal: dusk
+0 missing scans
+Percentage of queries correctly localized (10m threshold): 0.898
+Traversal: overcast-summer
+0 missing scans
+Percentage of queries correctly localized (10m threshold): 0.982
+Traversal: overcast-winter
+0 missing scans
+Percentage of queries correctly localized (10m threshold): 0.916
+Traversal: sun
+0 missing scans
+Percentage of queries correctly localized (10m threshold): 0.900
+Traversal: rain
+7 missing scans
+Percentage of queries correctly localized (10m threshold): 0.803
+Traversal: snow
+0 missing scans
+Percentage of queries correctly localized (10m threshold): 0.854
+Traversal: night
+0 missing scans
+Percentage of queries correctly localized (10m threshold): 0.873
+Traversal: night-rain
+3 missing scans
+Percentage of queries correctly localized (10m threshold): 0.527
+
+
+
+Multi-modal 原始自带模型 RGB+3D效果：5m
+Traversal: dawn
+Percentage of queries correctly localized (5m threshold): 0.843
+Traversal: dusk
+Percentage of queries correctly localized (5m threshold): 0.861
+Traversal: overcast-summer
+Percentage of queries correctly localized (5m threshold): 0.895
+Traversal: overcast-winter
+Percentage of queries correctly localized (5m threshold): 0.842
+Traversal: sun
+Percentage of queries correctly localized (5m threshold): 0.842
+Traversal: rain
+Percentage of queries correctly localized (5m threshold): 0.788
+Traversal: snow
+Percentage of queries correctly localized (5m threshold): 0.828
+Traversal: night
+Percentage of queries correctly localized (5m threshold): 0.853
+Traversal: night-rain
+Percentage of queries correctly localized (5m threshold): 0.513
+
+
+Multi-modal: 我们跑出来的RGB+3D模型：5m
+Traversal: dawn
+Percentage of queries correctly localized (5m threshold): 0.843
+Traversal: dusk
+Percentage of queries correctly localized (5m threshold): 0.893
+Traversal: overcast-summer
+Percentage of queries correctly localized (5m threshold): 0.855
+Traversal: overcast-winter
+Percentage of queries correctly localized (5m threshold): 0.817
+Traversal: sun
+Percentage of queries correctly localized (5m threshold): 0.789
+Traversal: rain
+Percentage of queries correctly localized (5m threshold): 0.763
+Traversal: snow
+Percentage of queries correctly localized (5m threshold): 0.782
+Traversal: night
+Percentage of queries correctly localized (5m threshold): 0.858
+Traversal: night-rain
+Percentage of queries correctly localized (5m threshold): 0.429
+
+Wave-multi-modal: RGB+3D : ours 5m
+Traversal: dawn
+Percentage of queries correctly localized (5m threshold): 0.783
+Traversal: dusk
+Percentage of queries correctly localized (5m threshold): 0.850
+Traversal: overcast-summer
+Percentage of queries correctly localized (5m threshold): 0.941
+Traversal: overcast-winter
+Percentage of queries correctly localized (5m threshold): 0.851
+Traversal: sun
+Percentage of queries correctly localized (5m threshold): 0.794
+Traversal: rain
+Percentage of queries correctly localized (5m threshold): 0.763
+Traversal: snow
+Percentage of queries correctly localized (5m threshold): 0.795
+Traversal: night
+Percentage of queries correctly localized (5m threshold): 0.787
+Traversal: night-rain
+Percentage of queries correctly localized (5m threshold): 0.366
+
+

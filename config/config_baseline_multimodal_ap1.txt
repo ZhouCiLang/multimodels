@@ -1,0 +1,30 @@
+# Config for training a multi-modal model with point clouds and RGB images on Baseline dataset (RobotCar)
+[DEFAULT]
+num_points = 4096
+
+dataset_folder = /userhome/datasets/benchmark_datasets/
+image_path = /dataset/images4lidar_small20/
+
+[TRAIN]
+num_workers = 8
+batch_size = 1024
+batch_split_size = 64
+val_batch_size = 256
+
+lr = 1e-3
+image_lr = 1e-4
+epochs = 400
+scheduler_milestones = 250,350
+
+aug_mode = 1
+weight_decay = 1e-4
+
+loss = MultiTruncatedsmoothap
+tau1 = 0.01
+positives_per_query = 4
+
+weights = 0.5, 0.5, 0.0
+normalize_embeddings = False
+margin = 0.2
+
+train_file = /userhome/code/MinkLoc3D/generating_queries/training_queries_baseline.pickle

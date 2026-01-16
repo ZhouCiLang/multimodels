@@ -1,0 +1,4 @@
+# MinkLoc3D model
+[MODEL]
+model = WaveMultimodalInferAll256
+mink_quantization_size = 0.01

@@ -1,0 +1,969 @@
+loss is
+ MultiBatchHardTripletMarginLoss
+Parameters:
+params_path: ./config/config_baseline_multimodal.txt
+model_params_path: ./models/wavemultimodalinferall256.txt
+num_points: 4096
+dataset_folder: /userhome/datasets/Kitti_Odometry/dataset/
+use_cloud: True
+use_rgb: True
+image_path: /dataset/images4lidar_small20/
+lidar2image_ndx_path: /dataset/images4lidar_small20/lidar2image_ndx.pickle
+eval_database_files: ['KITTI_00_database_samp10.pickle']
+eval_query_files: ['KITTI_00_query_samp10.pickle']
+num_workers: 8
+batch_size: 8
+val_batch_size: 160
+batch_split_size: None
+batch_expansion_th: 0.7
+batch_size_limit: 160
+batch_expansion_rate: 1.4
+lr: 0.001
+image_lr: 0.0001
+optimizer: Adam
+scheduler: MultiStepLR
+scheduler_milestones: [40]
+epochs: 60
+weight_decay: 0.0001
+normalize_embeddings: False
+loss: MultiBatchHardTripletMarginLoss
+weights: [0.5, 0.5, 0.0]
+margin: 0.2
+similarity: euclidean
+aug_mode: 1
+train_file: /userhome/code/MinkLoc3D/generating_queries/training_queries_baseline.pickle
+val_file: None
+dataset_name: KITTI
+Model parameters:
+model_params_path: ./models/wavemultimodalinferall256.txt
+model: WaveMultimodalInferAll256
+mink_quantization_size: [2.5, 2.0, 0.42]
+
+
+Go WaveMultimodalInferAll256!
+
+Loading weights: ./weights/model_WaveMultimodalInferAll256_20231227_0909_final.pth
+indices: [[ 51   9   2  53   3  81  28  26 153  52  95 154  83  10  80  11  37 124
+  101  13  16 138   6  21  50]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/001641.bin', 'query_img': 'sequences/00/image_2/001641.png', 0: [18, 19, 158, 17, 20, 157, 21, 22, 23, 24]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000575.bin', 'query_img': 'sequences/00/image_2/000575.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000090.bin', 'query_img': 'sequences/00/image_2/000090.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000022.bin', 'query_img': 'sequences/00/image_2/000022.png'}
+indices: [[ 91 125 126  88  20   3   4  90  17 158 156  18  16  23  22 157  19 100
+   21  89  49  50   9   2 130]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/001652.bin', 'query_img': 'sequences/00/image_2/001652.png', 0: [18, 19, 158, 20, 21, 22, 23]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000956.bin', 'query_img': 'sequences/00/image_2/000956.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/001296.bin', 'query_img': 'sequences/00/image_2/001296.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001297.bin', 'query_img': 'sequences/00/image_2/001297.png'}
+indices: [[ 16  18 130 156 158   8  98  19   9 154 139  15 125 100 129  63  92   6
+   96  17  50 143 155  61  32]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/001663.bin', 'query_img': 'sequences/00/image_2/001663.png', 0: [20, 21, 22]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000162.bin', 'query_img': 'sequences/00/image_2/000162.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000189.bin', 'query_img': 'sequences/00/image_2/000189.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001332.bin', 'query_img': 'sequences/00/image_2/001332.png'}
+indices: [[100 130  36  35  29  88  91  87 105  37  89 129  18  98  20  22  86  90
+   99  15  94   3  97  81 126]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/002406.bin', 'query_img': 'sequences/00/image_2/002406.png', 0: [35, 36, 37, 38, 39]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/001048.bin', 'query_img': 'sequences/00/image_2/001048.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/001332.bin', 'query_img': 'sequences/00/image_2/001332.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000367.bin', 'query_img': 'sequences/00/image_2/000367.png'}
+indices: [[ 38  23  25  36  35  67  22  39  88  92  79  80  20  76  89  66  96  21
+   91  34  75  86 100  30  50]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/002420.bin', 'query_img': 'sequences/00/image_2/002420.png', 0: [34, 35, 36, 37, 38, 39, 40]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000396.bin', 'query_img': 'sequences/00/image_2/000396.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000229.bin', 'query_img': 'sequences/00/image_2/000229.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000255.bin', 'query_img': 'sequences/00/image_2/000255.png'}
+indices: [[ 41  52  40  53 138  68  80  51  11 151  67  81 136 137 134  69 108  79
+  107  26 135  37  28 133  42]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/002437.bin', 'query_img': 'sequences/00/image_2/002437.png', 0: [34, 35, 36, 37, 38, 39, 40, 41, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000416.bin', 'query_img': 'sequences/00/image_2/000416.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000576.bin', 'query_img': 'sequences/00/image_2/000576.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000415.bin', 'query_img': 'sequences/00/image_2/000415.png'}
+indices: [[138  52  53  80 137  79  68 136  41 134 107  51  67  40 135  81 108  21
+  133  37  11 109  22   2 151]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/002438.bin', 'query_img': 'sequences/00/image_2/002438.png', 0: [34, 35, 36, 37, 38, 39, 40, 41, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/001415.bin', 'query_img': 'sequences/00/image_2/001415.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000576.bin', 'query_img': 'sequences/00/image_2/000576.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000577.bin', 'query_img': 'sequences/00/image_2/000577.png'}
+indices: [[ 38  39  36  35  37  96  75  88  21  95  86  23  83  89  43  22  25  76
+   85  94  80  34  71  99 109]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/002452.bin', 'query_img': 'sequences/00/image_2/002452.png', 0: [35, 36, 37, 38, 39, 40, 41, 44, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000396.bin', 'query_img': 'sequences/00/image_2/000396.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000397.bin', 'query_img': 'sequences/00/image_2/000397.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000367.bin', 'query_img': 'sequences/00/image_2/000367.png'}
+indices: [[38 39 94 95 88 36 89 35 96 75 84 23 76 93 37 87 43 85 71 21 83 92 25 86
+  34]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/002453.bin', 'query_img': 'sequences/00/image_2/002453.png', 0: [35, 36, 37, 38, 39, 40, 41, 44, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000396.bin', 'query_img': 'sequences/00/image_2/000396.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000397.bin', 'query_img': 'sequences/00/image_2/000397.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000984.bin', 'query_img': 'sequences/00/image_2/000984.png'}
+indices: [[ 84  41  81  40  37  30  39  83  82  73   7  31  71  69 150  95 100  86
+  152  85   2  38  70  28   5]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/002465.bin', 'query_img': 'sequences/00/image_2/002465.png', 0: [37, 38, 39, 40, 41, 44, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000889.bin', 'query_img': 'sequences/00/image_2/000889.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000416.bin', 'query_img': 'sequences/00/image_2/000416.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000856.bin', 'query_img': 'sequences/00/image_2/000856.png'}
+indices: [[ 40  41  31  81  30  84  83 150  56 147  87  97  68  73  82 146  28  42
+   95  10 140   7  71  51  52]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/002476.bin', 'query_img': 'sequences/00/image_2/002476.png', 0: [38, 39, 40, 41, 44, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000415.bin', 'query_img': 'sequences/00/image_2/000415.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000416.bin', 'query_img': 'sequences/00/image_2/000416.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000316.bin', 'query_img': 'sequences/00/image_2/000316.png'}
+indices: [[ 38  37 106 105  39  81  83  89  50  36  95  88   5 100  86  84  30 104
+   35  76   6   3  71 147  99]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/002486.bin', 'query_img': 'sequences/00/image_2/002486.png', 0: [40, 41, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000396.bin', 'query_img': 'sequences/00/image_2/000396.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000382.bin', 'query_img': 'sequences/00/image_2/000382.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001101.bin', 'query_img': 'sequences/00/image_2/001101.png'}
+indices: [[100  91 130  88  92  15  89  18 158 105  35  99 155  38   5  19  36  17
+   87  90  16 103  39   7   4]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003349.bin', 'query_img': 'sequences/00/image_2/003349.png', 0: [35, 36, 37, 38, 39]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/001048.bin', 'query_img': 'sequences/00/image_2/001048.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000956.bin', 'query_img': 'sequences/00/image_2/000956.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001332.bin', 'query_img': 'sequences/00/image_2/001332.png'}
+indices: [[100  88  91 130  35  87 158  89  92  18 105  93  90  36  99  94  20  29
+  126 102 103 125  96 129  17]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003350.bin', 'query_img': 'sequences/00/image_2/003350.png', 0: [35, 36, 37, 38, 39]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/001048.bin', 'query_img': 'sequences/00/image_2/001048.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000936.bin', 'query_img': 'sequences/00/image_2/000936.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000956.bin', 'query_img': 'sequences/00/image_2/000956.png'}
+indices: [[ 38  39  35  86  23  36  92  88  22 100  67  37  25 135  80  89  30 130
+   83  79  91 105   5  87 136]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003365.bin', 'query_img': 'sequences/00/image_2/003365.png', 0: [34, 35, 36, 37, 38, 39, 40, 41]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000396.bin', 'query_img': 'sequences/00/image_2/000396.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000397.bin', 'query_img': 'sequences/00/image_2/000397.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000366.bin', 'query_img': 'sequences/00/image_2/000366.png'}
+indices: [[ 38  35  39  36  23  88  67  22  25  80  79  83  86 135  76  89  20 136
+  108  92  21  34 134  96  66]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003366.bin', 'query_img': 'sequences/00/image_2/003366.png', 0: [34, 35, 36, 37, 38, 39, 40, 41]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000396.bin', 'query_img': 'sequences/00/image_2/000396.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000366.bin', 'query_img': 'sequences/00/image_2/000366.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000397.bin', 'query_img': 'sequences/00/image_2/000397.png'}
+indices: [[ 68  53  52 138  41  80  40  51  67 136  81  11 134 137 150 135  28  26
+   79  83  22 108 151  42  21]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003386.bin', 'query_img': 'sequences/00/image_2/003386.png', 0: [34, 35, 36, 37, 38, 39, 40, 41, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000733.bin', 'query_img': 'sequences/00/image_2/000733.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000577.bin', 'query_img': 'sequences/00/image_2/000577.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000576.bin', 'query_img': 'sequences/00/image_2/000576.png'}
+indices: [[ 41  40 138  53  68  52 137  67  80  81  11  51 151  26  37  22 108 136
+   42  84 134  28  21  79 107]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003387.bin', 'query_img': 'sequences/00/image_2/003387.png', 0: [34, 35, 36, 37, 38, 39, 40, 41, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000416.bin', 'query_img': 'sequences/00/image_2/000416.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000415.bin', 'query_img': 'sequences/00/image_2/000415.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001415.bin', 'query_img': 'sequences/00/image_2/001415.png'}
+indices: [[38 39 36 35 89 88 83 34 96 86 23 75 95 94 21 76 37 93 25 43 50 85 91 71
+  92]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003405.bin', 'query_img': 'sequences/00/image_2/003405.png', 0: [35, 36, 37, 38, 39, 40, 41, 44, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000396.bin', 'query_img': 'sequences/00/image_2/000396.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000397.bin', 'query_img': 'sequences/00/image_2/000397.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000367.bin', 'query_img': 'sequences/00/image_2/000367.png'}
+indices: [[ 38  36  39  23  96  95  75  35  88  43  24  89  50  37   3  22  21  91
+   94  76  86 100 105  93  42]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003406.bin', 'query_img': 'sequences/00/image_2/003406.png', 0: [35, 36, 37, 38, 39, 40, 41, 44, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000396.bin', 'query_img': 'sequences/00/image_2/000396.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000367.bin', 'query_img': 'sequences/00/image_2/000367.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000397.bin', 'query_img': 'sequences/00/image_2/000397.png'}
+indices: [[ 41  52 136  40  53 107  68  80 134 135 138 108  81 137  67 133   2  21
+  109  51 118  42 119  69  84]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003424.bin', 'query_img': 'sequences/00/image_2/003424.png', 0: [37, 38, 39, 40, 41, 44, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000416.bin', 'query_img': 'sequences/00/image_2/000416.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000576.bin', 'query_img': 'sequences/00/image_2/000576.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001380.bin', 'query_img': 'sequences/00/image_2/001380.png'}
+indices: [[ 41  40  52  68 136  53  69  42 107  81  80 119 118 108 138   2 135 134
+   51  43  70  84   0  26  67]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003425.bin', 'query_img': 'sequences/00/image_2/003425.png', 0: [37, 38, 39, 40, 41, 44, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000416.bin', 'query_img': 'sequences/00/image_2/000416.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000415.bin', 'query_img': 'sequences/00/image_2/000415.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000576.bin', 'query_img': 'sequences/00/image_2/000576.png'}
+indices: [[ 43  76  42  21  88  44   3  89   2 127  75  96  25 123  23 122  93  22
+   20 124  50  94 109  29  37]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003444.bin', 'query_img': 'sequences/00/image_2/003444.png', 0: [38, 39, 40, 41, 44, 45, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000438.bin', 'query_img': 'sequences/00/image_2/000438.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000813.bin', 'query_img': 'sequences/00/image_2/000813.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000437.bin', 'query_img': 'sequences/00/image_2/000437.png'}
+indices: [[ 43  42  76  44   3   2  45  57  77  29 127  88  78  96  21   9  25 122
+   23  56  75  50  89 130  27]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003445.bin', 'query_img': 'sequences/00/image_2/003445.png', 0: [38, 39, 40, 41, 44, 45, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000438.bin', 'query_img': 'sequences/00/image_2/000438.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000437.bin', 'query_img': 'sequences/00/image_2/000437.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000813.bin', 'query_img': 'sequences/00/image_2/000813.png'}
+indices: [[ 44  45 127 130 128  93 125  35 126 129  36  50  88  76  91  29  89  96
+  132  17  25   3 158  57  90]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003458.bin', 'query_img': 'sequences/00/image_2/003458.png', 0: [40, 41, 44, 45, 46, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000453.bin', 'query_img': 'sequences/00/image_2/000453.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000465.bin', 'query_img': 'sequences/00/image_2/000465.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001309.bin', 'query_img': 'sequences/00/image_2/001309.png'}
+indices: [[ 45  46  44  47 130 127 129 139  57 125   3  76 126   6 128 132  50  48
+   15  91 143 131  23 140  25]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003469.bin', 'query_img': 'sequences/00/image_2/003469.png', 0: [44, 45, 46, 47, 43, 42]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000465.bin', 'query_img': 'sequences/00/image_2/000465.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000476.bin', 'query_img': 'sequences/00/image_2/000476.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000453.bin', 'query_img': 'sequences/00/image_2/000453.png'}
+indices: [[ 46  47 129 130   6  45   3 139 154  15  98   9  57  14 155  50  24 140
+   56 143  49  32  30  48  29]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003478.bin', 'query_img': 'sequences/00/image_2/003478.png', 0: [44, 45, 46, 47, 48]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000476.bin', 'query_img': 'sequences/00/image_2/000476.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000488.bin', 'query_img': 'sequences/00/image_2/000488.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001321.bin', 'query_img': 'sequences/00/image_2/001321.png'}
+indices: [[ 47  46  48   6 130   9   8   3  15  45  24  50  49   4  77  76  29  57
+   27 146  98 129 131   7 148]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003487.bin', 'query_img': 'sequences/00/image_2/003487.png', 0: [45, 46, 47, 48, 49, 50]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000488.bin', 'query_img': 'sequences/00/image_2/000488.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000476.bin', 'query_img': 'sequences/00/image_2/000476.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000501.bin', 'query_img': 'sequences/00/image_2/000501.png'}
+indices: [[ 48 148  97  15  47 130  49 155   7   9  98  56  57  10 150  42 131 146
+   62  46  31  64  30  87  81]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003497.bin', 'query_img': 'sequences/00/image_2/003497.png', 0: [53, 46, 47, 48, 49, 50, 51, 52, 54]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000501.bin', 'query_img': 'sequences/00/image_2/000501.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/001523.bin', 'query_img': 'sequences/00/image_2/001523.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001016.bin', 'query_img': 'sequences/00/image_2/001016.png'}
+indices: [[ 50  49  29  27  95  87  81 132 156   9 130  63  24   7  51  61  53  43
+   66  82  42  23  11   3  75]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003510.bin', 'query_img': 'sequences/00/image_2/003510.png', 0: [139, 137, 138, 53, 47, 48, 133, 134, 135, 136, 49, 50, 51, 52, 54, 55]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000517.bin', 'query_img': 'sequences/00/image_2/000517.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000516.bin', 'query_img': 'sequences/00/image_2/000516.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000303.bin', 'query_img': 'sequences/00/image_2/000303.png'}
+indices: [[ 50  49  27  87  29  95 156  81  43   7  42   9  30 132  75  84  53   6
+  138  82  24 154  31  79 139]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003511.bin', 'query_img': 'sequences/00/image_2/003511.png', 0: [139, 137, 138, 53, 47, 48, 133, 134, 135, 136, 49, 50, 51, 52, 54, 55]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000517.bin', 'query_img': 'sequences/00/image_2/000517.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000516.bin', 'query_img': 'sequences/00/image_2/000516.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000279.bin', 'query_img': 'sequences/00/image_2/000279.png'}
+indices: [[ 53  52  51 138  80 135 134 137 136  79 133  26  67 108 109  81  11  21
+   28 107   2  68 110 151  22]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003541.bin', 'query_img': 'sequences/00/image_2/003541.png', 0: [139, 137, 138, 53, 48, 132, 133, 134, 135, 136, 49, 50, 51, 52, 54, 55]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000577.bin', 'query_img': 'sequences/00/image_2/000577.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000576.bin', 'query_img': 'sequences/00/image_2/000576.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000575.bin', 'query_img': 'sequences/00/image_2/000575.png'}
+indices: [[ 53  52  51 138 137  68  67  11  26  80  79  66  81 135 150 134   9 136
+   21   2  28  13  22  10 151]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003542.bin', 'query_img': 'sequences/00/image_2/003542.png', 0: [139, 137, 138, 53, 48, 132, 133, 134, 135, 136, 49, 50, 51, 52, 54, 55]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000577.bin', 'query_img': 'sequences/00/image_2/000577.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000576.bin', 'query_img': 'sequences/00/image_2/000576.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000575.bin', 'query_img': 'sequences/00/image_2/000575.png'}
+indices: [[ 53  52  51 138 137  11 134  81  68 135  67  26  80 136  28  84   2 133
+  151  79   9  41  83  66  21]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003543.bin', 'query_img': 'sequences/00/image_2/003543.png', 0: [139, 137, 138, 53, 48, 132, 133, 134, 135, 136, 49, 50, 51, 52, 54, 55]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000577.bin', 'query_img': 'sequences/00/image_2/000577.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000576.bin', 'query_img': 'sequences/00/image_2/000576.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000575.bin', 'query_img': 'sequences/00/image_2/000575.png'}
+indices: [[ 54  56  55   9 140  10  57   6 139   2 148  97 141   7  64   3 146  49
+   61  59  63 154 147  58  81]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003560.bin', 'query_img': 'sequences/00/image_2/003560.png', 0: [139, 137, 138, 53, 132, 133, 134, 135, 136, 49, 50, 51, 52, 54, 55, 56]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000598.bin', 'query_img': 'sequences/00/image_2/000598.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000623.bin', 'query_img': 'sequences/00/image_2/000623.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000612.bin', 'query_img': 'sequences/00/image_2/000612.png'}
+indices: [[ 55 139  56   9  64 146  54 141  58 148 140  57  62  63   7 143  61  60
+  144 149   6 142  10  66  30]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003572.bin', 'query_img': 'sequences/00/image_2/003572.png', 0: [53, 133, 134, 135, 136, 51, 52, 54, 55, 56, 57]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000612.bin', 'query_img': 'sequences/00/image_2/000612.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/001430.bin', 'query_img': 'sequences/00/image_2/001430.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000623.bin', 'query_img': 'sequences/00/image_2/000623.png'}
+indices: [[ 56  57 140  97  54 139  64   3   9  63   2  29  94 148 155  98 147 141
+   78  49 154  61 143  10   7]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003581.bin', 'query_img': 'sequences/00/image_2/003581.png', 0: [58, 54, 55, 56, 57]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000623.bin', 'query_img': 'sequences/00/image_2/000623.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000633.bin', 'query_img': 'sequences/00/image_2/000633.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001441.bin', 'query_img': 'sequences/00/image_2/001441.png'}
+indices: [[ 57  56 139 140  54  61   9 141 148   6  64  55   7  58  49 143   3  62
+  147  97 146  98  63  59  29]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003589.bin', 'query_img': 'sequences/00/image_2/003589.png', 0: [58, 59, 55, 56, 57]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000633.bin', 'query_img': 'sequences/00/image_2/000633.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000623.bin', 'query_img': 'sequences/00/image_2/000623.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001430.bin', 'query_img': 'sequences/00/image_2/001430.png'}
+indices: [[ 58  59 145 143  60 144  55  57 149  61 142  62   8 146 139  56  49 141
+    6  63 140 154   9  50   7]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003597.bin', 'query_img': 'sequences/00/image_2/003597.png', 0: [58, 59, 60, 56, 57]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000642.bin', 'query_img': 'sequences/00/image_2/000642.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000652.bin', 'query_img': 'sequences/00/image_2/000652.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001491.bin', 'query_img': 'sequences/00/image_2/001491.png'}
+indices: [[ 59  58  60  55  61  62  57 145 144 146 141 143   6  54 149   8  63 142
+    9 139  56  65  10 140   7]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003605.bin', 'query_img': 'sequences/00/image_2/003605.png', 0: [58, 59, 60, 61, 57]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000652.bin', 'query_img': 'sequences/00/image_2/000652.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000642.bin', 'query_img': 'sequences/00/image_2/000642.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000661.bin', 'query_img': 'sequences/00/image_2/000661.png'}
+indices: [[ 60  61 144 145  58  59   8 143 149 141 142  55  25  62 146  96  63  57
+  139   6  50   9  95  49   4]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003613.bin', 'query_img': 'sequences/00/image_2/003613.png', 0: [58, 59, 60, 61, 62]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000661.bin', 'query_img': 'sequences/00/image_2/000661.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000671.bin', 'query_img': 'sequences/00/image_2/000671.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001483.bin', 'query_img': 'sequences/00/image_2/001483.png'}
+indices: [[ 61  60  62  63  58  57 143  59 144 139 141  55 146  64 140  56   9  49
+   87   8  50  98 145   6   7]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003621.bin', 'query_img': 'sequences/00/image_2/003621.png', 0: [59, 60, 61, 62, 63]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000671.bin', 'query_img': 'sequences/00/image_2/000671.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000661.bin', 'query_img': 'sequences/00/image_2/000661.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000680.bin', 'query_img': 'sequences/00/image_2/000680.png'}
+indices: [[ 62  63  61   8   9  57  64 149 139  10   6 146  60 148  58  55   7  49
+   50 143 140   5 144  54 155]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003629.bin', 'query_img': 'sequences/00/image_2/003629.png', 0: [60, 61, 62, 63, 64]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000680.bin', 'query_img': 'sequences/00/image_2/000680.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000690.bin', 'query_img': 'sequences/00/image_2/000690.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000671.bin', 'query_img': 'sequences/00/image_2/000671.png'}
+indices: [[ 63  62  61 139   8 146   6   9  64  55   5  59   7 140 147  57  58 148
+  149  60  49  65  54  10 155]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003637.bin', 'query_img': 'sequences/00/image_2/003637.png', 0: [61, 62, 63, 64, 65]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000690.bin', 'query_img': 'sequences/00/image_2/000690.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000680.bin', 'query_img': 'sequences/00/image_2/000680.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000671.bin', 'query_img': 'sequences/00/image_2/000671.png'}
+indices: [[ 64  63 139   9 140  57  54  66  65  56  62 148 131  10   6  26 147  61
+    7 132   3 130 141  29  27]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003646.bin', 'query_img': 'sequences/00/image_2/003646.png', 0: [62, 63, 64, 65, 66, 67, 68, 69]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000700.bin', 'query_img': 'sequences/00/image_2/000700.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000690.bin', 'query_img': 'sequences/00/image_2/000690.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001430.bin', 'query_img': 'sequences/00/image_2/001430.png'}
+indices: [[ 55  65   8   9 146 149  62   6 139  10 142  61  25  63  60  58 143 145
+  140 144  67  30  66  57 147]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003657.bin', 'query_img': 'sequences/00/image_2/003657.png', 0: [63, 64, 65, 66, 67, 68, 69, 70, 71, 72]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000612.bin', 'query_img': 'sequences/00/image_2/000612.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000712.bin', 'query_img': 'sequences/00/image_2/000712.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000075.bin', 'query_img': 'sequences/00/image_2/000075.png'}
+indices: [[ 67  68  66 150 138  10  26   9 137  65  22  81  30  64  31  21  51  80
+  140  28  11   2  42  53 141]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003673.bin', 'query_img': 'sequences/00/image_2/003673.png', 0: [64, 65, 66, 67, 68, 69, 70, 71, 72]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000732.bin', 'query_img': 'sequences/00/image_2/000732.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000733.bin', 'query_img': 'sequences/00/image_2/000733.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000731.bin', 'query_img': 'sequences/00/image_2/000731.png'}
+indices: [[ 68  67  66 150 138  28  81  11  65  51  31  26  10  80 137  40  53  30
+   84   9  79  22  64  82 140]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003674.bin', 'query_img': 'sequences/00/image_2/003674.png', 0: [64, 65, 66, 67, 68, 69, 70, 71, 72]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000733.bin', 'query_img': 'sequences/00/image_2/000733.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000732.bin', 'query_img': 'sequences/00/image_2/000732.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000731.bin', 'query_img': 'sequences/00/image_2/000731.png'}
+indices: [[ 69  70  41  40  81  52 136 152  51 134 135  53 151  80  68  28 133  12
+   84 107 150  42  13  11  82]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003692.bin', 'query_img': 'sequences/00/image_2/003692.png', 0: [65, 66, 67, 68, 69, 70, 71, 72, 73]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000752.bin', 'query_img': 'sequences/00/image_2/000752.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000753.bin', 'query_img': 'sequences/00/image_2/000753.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000416.bin', 'query_img': 'sequences/00/image_2/000416.png'}
+indices: [[ 70  69  41  40 152  52  81 136 151  51 135 134  12 150 133  53  68  28
+   84  11  13  42 107  80  10]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003693.bin', 'query_img': 'sequences/00/image_2/003693.png', 0: [65, 66, 67, 68, 69, 70, 71, 72, 73]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000753.bin', 'query_img': 'sequences/00/image_2/000753.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000752.bin', 'query_img': 'sequences/00/image_2/000752.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000416.bin', 'query_img': 'sequences/00/image_2/000416.png'}
+indices: [[ 71  72  75 154  36  37  28  34  33  79  84  38 144  35   9 153 141  80
+   83  94  86  95  96   2   3]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003706.bin', 'query_img': 'sequences/00/image_2/003706.png', 0: [65, 66, 67, 68, 69, 70, 71, 72, 73, 74]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000767.bin', 'query_img': 'sequences/00/image_2/000767.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000768.bin', 'query_img': 'sequences/00/image_2/000768.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000801.bin', 'query_img': 'sequences/00/image_2/000801.png'}
+indices: [[ 72  71 154  75  36  37  79  74  94  80 141  28  83 153  35  73  34  38
+    2   3  33  95  89  50  39]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003707.bin', 'query_img': 'sequences/00/image_2/003707.png', 0: [65, 66, 67, 68, 69, 70, 71, 72, 73, 74]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000768.bin', 'query_img': 'sequences/00/image_2/000768.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000767.bin', 'query_img': 'sequences/00/image_2/000767.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001583.bin', 'query_img': 'sequences/00/image_2/001583.png'}
+indices: [[ 73  71  72  74  84  37  81  87  30  39 153  95  86  94 154  85  75  14
+   49  38  28   2  80  82  56]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003717.bin', 'query_img': 'sequences/00/image_2/003717.png', 0: [69, 70, 71, 72, 73, 74, 75]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000779.bin', 'query_img': 'sequences/00/image_2/000779.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000767.bin', 'query_img': 'sequences/00/image_2/000767.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000768.bin', 'query_img': 'sequences/00/image_2/000768.png'}
+indices: [[ 74  87  75  35  96  88  94  33  36  92  38  89  86  95  50  73  93  39
+  143  34  85 125 156  25 141]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003727.bin', 'query_img': 'sequences/00/image_2/003727.png', 0: [71, 72, 73, 74, 75, 76]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000790.bin', 'query_img': 'sequences/00/image_2/000790.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000921.bin', 'query_img': 'sequences/00/image_2/000921.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000801.bin', 'query_img': 'sequences/00/image_2/000801.png'}
+indices: [[ 75  76  96  25  89  88  95  36  23  38  24  43 143  21 144  35  86  83
+  141  79  50  33  84  71  34]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003736.bin', 'query_img': 'sequences/00/image_2/003736.png', 0: [73, 74, 75, 76, 77, 78]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000801.bin', 'query_img': 'sequences/00/image_2/000801.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000813.bin', 'query_img': 'sequences/00/image_2/000813.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001005.bin', 'query_img': 'sequences/00/image_2/001005.png'}
+indices: [[76 77 75 22  2 83 21  3 42 67 81 86 43 78 84 95 24  6 23 66 80 82 37 68
+  44]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003745.bin', 'query_img': 'sequences/00/image_2/003745.png', 0: [74, 75, 76, 77, 78, 79, 80]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000813.bin', 'query_img': 'sequences/00/image_2/000813.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000824.bin', 'query_img': 'sequences/00/image_2/000824.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000801.bin', 'query_img': 'sequences/00/image_2/000801.png'}
+indices: [[ 77  78  76   6   9  24  26   3  29  27  75  23  80  79 132  81  95   2
+  154  50 139  42 131  47  83]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003755.bin', 'query_img': 'sequences/00/image_2/003755.png', 0: [75, 76, 77, 78, 79, 80, 81]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000824.bin', 'query_img': 'sequences/00/image_2/000824.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000825.bin', 'query_img': 'sequences/00/image_2/000825.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000813.bin', 'query_img': 'sequences/00/image_2/000813.png'}
+indices: [[ 79  80  26  67  66  75  23  83  81   9 109  53 138 136   3  28  37  95
+   36   2  22  42  30  71 134]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003766.bin', 'query_img': 'sequences/00/image_2/003766.png', 0: [76, 77, 78, 79, 80, 81, 82]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000840.bin', 'query_img': 'sequences/00/image_2/000840.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000841.bin', 'query_img': 'sequences/00/image_2/000841.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000267.bin', 'query_img': 'sequences/00/image_2/000267.png'}
+indices: [[ 80  79  26  53  81  67  51 136 138  28  83  66  52  68 134   9 109 110
+   75  10 135   2 108  42 107]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003767.bin', 'query_img': 'sequences/00/image_2/003767.png', 0: [76, 77, 78, 79, 80, 81, 82]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000841.bin', 'query_img': 'sequences/00/image_2/000841.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000840.bin', 'query_img': 'sequences/00/image_2/000840.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000267.bin', 'query_img': 'sequences/00/image_2/000267.png'}
+indices: [[ 80  81  51  52  79  53  28   2  37  26 107  11  83  69  10  82 109 110
+   68  67  71   9  66   0 112]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003777.bin', 'query_img': 'sequences/00/image_2/003777.png', 0: [77, 78, 79, 80, 81, 82, 83]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000841.bin', 'query_img': 'sequences/00/image_2/000841.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000856.bin', 'query_img': 'sequences/00/image_2/000856.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000575.bin', 'query_img': 'sequences/00/image_2/000575.png'}
+indices: [[ 81  82  11  10  51  52  53  84  37 150  83 152  80   2 151  95  30   9
+   28  12  26  68  41  13  31]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003778.bin', 'query_img': 'sequences/00/image_2/003778.png', 0: [77, 78, 79, 80, 81, 82, 83]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000856.bin', 'query_img': 'sequences/00/image_2/000856.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000868.bin', 'query_img': 'sequences/00/image_2/000868.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000113.bin', 'query_img': 'sequences/00/image_2/000113.png'}
+indices: [[ 82  83  81  95  84  71   2  28  29  53  72  37  80  50  86 154  51  42
+   49 110  52  21  75  68  26]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003787.bin', 'query_img': 'sequences/00/image_2/003787.png', 0: [79, 80, 81, 82, 83, 84]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000868.bin', 'query_img': 'sequences/00/image_2/000868.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000879.bin', 'query_img': 'sequences/00/image_2/000879.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000856.bin', 'query_img': 'sequences/00/image_2/000856.png'}
+indices: [[ 83  84  82  95  50  75  86  21  81  79   2  76  71  80 138  36  29  22
+  154  35  49  26  23  77  37]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003796.bin', 'query_img': 'sequences/00/image_2/003796.png', 0: [81, 82, 83, 84, 85]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000879.bin', 'query_img': 'sequences/00/image_2/000879.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000889.bin', 'query_img': 'sequences/00/image_2/000889.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000868.bin', 'query_img': 'sequences/00/image_2/000868.png'}
+indices: [[ 84  88  96  83  95  89  39  99  92  21  38   2  76 100  35  86  50  94
+   91   3  37  36  90  85 130]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003804.bin', 'query_img': 'sequences/00/image_2/003804.png', 0: [82, 83, 84, 85, 86]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000889.bin', 'query_img': 'sequences/00/image_2/000889.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000936.bin', 'query_img': 'sequences/00/image_2/000936.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001005.bin', 'query_img': 'sequences/00/image_2/001005.png'}
+indices: [[ 85  87  86  84  88  89  96  95 153  33  35  21  71  37  39  34 156  83
+  154  20  50  38 101  16  90]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003813.bin', 'query_img': 'sequences/00/image_2/003813.png', 0: [83, 84, 85, 86, 87]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000899.bin', 'query_img': 'sequences/00/image_2/000899.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000921.bin', 'query_img': 'sequences/00/image_2/000921.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000910.bin', 'query_img': 'sequences/00/image_2/000910.png'}
+indices: [[ 86  87  83  81  88  37  50  80 154  95  49  71  84  89  30  75  82  72
+   85 153  96  79  36   3 124]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003822.bin', 'query_img': 'sequences/00/image_2/003822.png', 0: [84, 85, 86, 87, 88, 89]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000910.bin', 'query_img': 'sequences/00/image_2/000910.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000921.bin', 'query_img': 'sequences/00/image_2/000921.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000879.bin', 'query_img': 'sequences/00/image_2/000879.png'}
+indices: [[ 87  88  94  74  89  50  86  96  75  95 156  29  36  35 130  85  16  81
+  125  49  93  97  71  84  37]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003831.bin', 'query_img': 'sequences/00/image_2/003831.png', 0: [85, 86, 87, 88, 89, 90, 91, 92]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000921.bin', 'query_img': 'sequences/00/image_2/000921.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000936.bin', 'query_img': 'sequences/00/image_2/000936.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000984.bin', 'query_img': 'sequences/00/image_2/000984.png'}
+indices: [[ 88  89  96  35  92  86  36  39  87 104  38 105  50 103  99  21  83  91
+  125  85 157 100  90  93 106]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003840.bin', 'query_img': 'sequences/00/image_2/003840.png', 0: [86, 87, 88, 89, 90, 91, 92]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000936.bin', 'query_img': 'sequences/00/image_2/000936.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000937.bin', 'query_img': 'sequences/00/image_2/000937.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001005.bin', 'query_img': 'sequences/00/image_2/001005.png'}
+indices: [[ 37  81  86 136  53  22  80  99  95   2 134 100  21  52 135 124  83 133
+   84  51  71  72  79   3 107]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003849.bin', 'query_img': 'sequences/00/image_2/003849.png', 0: [87, 88, 89, 90, 91, 92, 93, 94]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000382.bin', 'query_img': 'sequences/00/image_2/000382.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000856.bin', 'query_img': 'sequences/00/image_2/000856.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000910.bin', 'query_img': 'sequences/00/image_2/000910.png'}
+indices: [[ 81 100   3  80  53   9   2  29  51  99  95 140  15   7 135  97 136 138
+   79  30  52  83 153 148  37]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003858.bin', 'query_img': 'sequences/00/image_2/003858.png', 0: [88, 89, 90, 91, 92]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000856.bin', 'query_img': 'sequences/00/image_2/000856.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/001048.bin', 'query_img': 'sequences/00/image_2/001048.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000023.bin', 'query_img': 'sequences/00/image_2/000023.png'}
+indices: [[130  87  50   9  98  15  29  97 155 139  24  81  49  94   7  57  79  42
+   83  26  30  25  46  80  56]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/003867.bin', 'query_img': 'sequences/00/image_2/003867.png', 0: [90, 91, 92]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/001332.bin', 'query_img': 'sequences/00/image_2/001332.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000921.bin', 'query_img': 'sequences/00/image_2/000921.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000517.bin', 'query_img': 'sequences/00/image_2/000517.png'}
+indices: [[ 80  53  79 138 108  51 110  28  52  75 109 117  26 124   2  42 134 136
+   83  67  22  21 112   3 135]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004403.bin', 'query_img': 'sequences/00/image_2/004403.png', 0: [0, 1]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000841.bin', 'query_img': 'sequences/00/image_2/000841.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000577.bin', 'query_img': 'sequences/00/image_2/000577.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000840.bin', 'query_img': 'sequences/00/image_2/000840.png'}
+indices: [[ 80  53 110  79 108  52 109  51 117 138  28 124  75  83 112  26   2  42
+  136  21 107  76  22 120  71]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004404.bin', 'query_img': 'sequences/00/image_2/004404.png', 0: [0, 1]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000841.bin', 'query_img': 'sequences/00/image_2/000841.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000577.bin', 'query_img': 'sequences/00/image_2/000577.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/001139.bin', 'query_img': 'sequences/00/image_2/001139.png'}
+indices: [[ 52  51  80  53 107 151 152 108 110   0 119  11  81 118  69  68  13  79
+   10 109 138  12   2 136  67]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004434.bin', 'query_img': 'sequences/00/image_2/004434.png', 0: [0, 1, 2, 3]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000576.bin', 'query_img': 'sequences/00/image_2/000576.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000575.bin', 'query_img': 'sequences/00/image_2/000575.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000841.bin', 'query_img': 'sequences/00/image_2/000841.png'}
+indices: [[  0  52  53 118 151 119 107  51 108 152  69  11  80 110  81  68  13   2
+   28 138  12  41 112  70  26]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004435.bin', 'query_img': 'sequences/00/image_2/004435.png', 0: [0, 1, 2, 3]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000000.bin', 'query_img': 'sequences/00/image_2/000000.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000576.bin', 'query_img': 'sequences/00/image_2/000576.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000577.bin', 'query_img': 'sequences/00/image_2/000577.png'}
+indices: [[ 52   0  53 151 107  51 118 119  11 152  69  68 108   2  80  81 110 136
+  138  67  41  12 109   1  28]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004436.bin', 'query_img': 'sequences/00/image_2/004436.png', 0: [0, 1, 2, 3]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000576.bin', 'query_img': 'sequences/00/image_2/000576.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000000.bin', 'query_img': 'sequences/00/image_2/000000.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000577.bin', 'query_img': 'sequences/00/image_2/000577.png'}
+indices: [[  0   1   2   3   4  10   6  22  21  81 113   9 150 110 109  11  67 112
+   68  43 153  42  76 124  80]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004454.bin', 'query_img': 'sequences/00/image_2/004454.png', 0: [0, 1, 2, 3, 4]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000000.bin', 'query_img': 'sequences/00/image_2/000000.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000011.bin', 'query_img': 'sequences/00/image_2/000011.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000022.bin', 'query_img': 'sequences/00/image_2/000022.png'}
+indices: [[  2   3   1   9   4   6 110   0  10  57 109 140  54  67  64 141 139   7
+   66  26  83  56  95  42  53]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004466.bin', 'query_img': 'sequences/00/image_2/004466.png', 0: [0, 1, 2, 3, 4]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000022.bin', 'query_img': 'sequences/00/image_2/000022.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000023.bin', 'query_img': 'sequences/00/image_2/000023.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000011.bin', 'query_img': 'sequences/00/image_2/000011.png'}
+indices: [[  3   4   9   2   6   7  57 148 140  98 139  10  54   5  56  29 146  64
+   99 154 153  49 100  15  63]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004476.bin', 'query_img': 'sequences/00/image_2/004476.png', 0: [0, 1, 2, 3, 4, 5]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000023.bin', 'query_img': 'sequences/00/image_2/000023.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000033.bin', 'query_img': 'sequences/00/image_2/000033.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000090.bin', 'query_img': 'sequences/00/image_2/000090.png'}
+indices: [[  6   3   7   2  57   9   5   4   8  49  50  54  25  98  64 141  55  99
+  140  29  56  95 156 100  32]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004503.bin', 'query_img': 'sequences/00/image_2/004503.png', 0: [4, 5, 6, 7, 8]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000053.bin', 'query_img': 'sequences/00/image_2/000053.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000023.bin', 'query_img': 'sequences/00/image_2/000023.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000063.bin', 'query_img': 'sequences/00/image_2/000063.png'}
+indices: [[  6   8   9   5  60   7   4   2   3 149  50  61  62  55 146  25  63  57
+   16 139 155  49 140 143  58]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004512.bin', 'query_img': 'sequences/00/image_2/004512.png', 0: [5, 6, 7, 8, 9, 10, 11, 12, 13]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000053.bin', 'query_img': 'sequences/00/image_2/000053.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000075.bin', 'query_img': 'sequences/00/image_2/000075.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000090.bin', 'query_img': 'sequences/00/image_2/000090.png'}
+indices: [[  8   6   9 149  55  10  62   5  50  49   7 139  58   2   3 146 145   4
+   63  99 154  60  25 153  61]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004520.bin', 'query_img': 'sequences/00/image_2/004520.png', 0: [6, 7, 8, 9, 10, 11, 12, 13, 14, 151, 152, 153, 154, 150]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000075.bin', 'query_img': 'sequences/00/image_2/000075.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000053.bin', 'query_img': 'sequences/00/image_2/000053.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000090.bin', 'query_img': 'sequences/00/image_2/000090.png'}
+indices: [[ 10  81   9 150   2  64   7  11  26  51  56  53  68  66  67   3  57  42
+  138  52  12  54 140  13  80]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004529.bin', 'query_img': 'sequences/00/image_2/004529.png', 0: [8, 9, 10, 11, 12, 13, 14, 15, 155, 151, 152, 153, 154, 149, 150]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/000091.bin', 'query_img': 'sequences/00/image_2/000091.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000856.bin', 'query_img': 'sequences/00/image_2/000856.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000090.bin', 'query_img': 'sequences/00/image_2/000090.png'}
+indices: [[150  10  11  81  40 147  65  31  13  12   9 151  30  41  51   7  68 152
+  148  56  52 146  64   2  55]]
+indices[0] (1, 25)
+query
+: {'query_velo': 'sequences/00/velodyne/004537.bin', 'query_img': 'sequences/00/image_2/004537.png', 0: [8, 9, 10, 11, 12, 13, 14, 15, 155, 151, 152, 153, 154, 148, 149, 150]}
+database1:
+ {'query_velo': 'sequences/00/velodyne/001547.bin', 'query_img': 'sequences/00/image_2/001547.png'}
+database2:
+ {'query_velo': 'sequences/00/velodyne/000091.bin', 'query_img': 'sequences/00/image_2/000091.png'}
+database3:
+ {'query_velo': 'sequences/00/velodyne/000113.bin', 'query_img': 'sequences/00/image_2/000113.png'}
