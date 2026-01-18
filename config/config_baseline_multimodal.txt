@@ -3,8 +3,8 @@
 num_points = 4096
 
 dataset_folder = /root/autodl-tmp/benchmark_datasets
-image_path = /dataset/images4lidar_small20/
-
+image_path = /root/autodl-tmp/images4lidar_small20/
+lidar2image_ndx_path = /root/autodl-tmp/images4lidar_small20/lidar2image_ndx.pickle
 
 [TRAIN]
 num_workers = 8
@@ -18,6 +18,8 @@ lr = 1e-3
 image_lr = 1e-4
 epochs = 60
 scheduler_milestones = 40
+
+display = 0
 
 aug_mode = 1
 weight_decay = 1e-4

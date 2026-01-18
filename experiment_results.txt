@@ -265,3 +265,4 @@ svtinfer256.txt, config_baseline_multimodal_sketchRGB.txt, model_SVTinfer256_202
 svtcon256.txt, config_baseline_multimodal_sketchRGB.txt, model_SVTcon256_20240112_1633, 98.97, 96.01, 98.97, 96.01
 svtadd256.txt, config_baseline_multimodal_sketchRGB.txt, model_SVTadd256_20240112_1628, 98.74, 95.11, 98.74, 95.11
 svtcon256.txt, config_baseline_multimodal_sketchRGB.txt, model_SVTcon256_20240112_2113, 99.02, 96.18, 99.02, 96.18
+minklocmultimodal.txt, config_baseline_multimodal.txt, model_MinkLocMultimodal_20260117_1929, 99.21, 97.00, 99.21, 97.00
